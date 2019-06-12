@@ -2,12 +2,12 @@ import React, {
   Suspense,  
 } from 'react';
 import {
-  Provider
+  Provider,
 } from 'react-redux';
 
 import TodoList from './pages/TodoList';
 
-import store from './Store';
+import store from './store';
 
 import './assets/styles/Main.scss';
 

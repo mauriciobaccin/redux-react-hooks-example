@@ -6,7 +6,6 @@ import {
 } from 'react-redux';
 import uuidv4 from 'uuid/v4';
 
-
 const CONTEXT = '@TODO';
 
 export const ADD_TODO = `${CONTEXT}/ADD_TODO`;
@@ -24,15 +23,15 @@ function addTodo(dispatch) {
     name: '',
     status: false,
   }));
-}
+};
 
 function changeTodo(dispatch, todo) {
   dispatch(changeStatusAction(todo));
-}
+};
 
 function removeTodo(dispatch, todo) {
   dispatch(removeTodoTodoAction(todo));
-}
+};
 
 export function useActions() {
   const dispatch = useDispatch();
@@ -42,4 +41,4 @@ export function useActions() {
     handleChangeTodo: todo => changeTodo(dispatch, todo),
     handleRemoveTodo: todo => removeTodo(dispatch, todo),
   }
-}
+};

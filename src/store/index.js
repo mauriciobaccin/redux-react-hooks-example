@@ -3,7 +3,7 @@ import {
   createStore,
 } from 'redux';
 
-import reducers from '../Reducers';
+import reducers from '../reducers';
 
 // If you have a Redux extesion for Chrome.
 const enhacers = (window.__REDUX_DEVTOOLS_EXTENSION__

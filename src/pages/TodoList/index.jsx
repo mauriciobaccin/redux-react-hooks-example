@@ -15,14 +15,14 @@ function TodoList(){
 
   const [
     myTodoList,
-    handlers,
+    dispatchers,
    ] = useStore();
 
   const {
     handleAddTodo,
     handleChangeTodo,
     handleRemoveTodo,
-  } = handlers;
+  } = dispatchers;
 
   function renderTodoItem(todo){
     return(

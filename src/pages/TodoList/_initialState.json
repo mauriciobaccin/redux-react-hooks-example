@@ -1,0 +1,24 @@
+{
+    "list": [
+        {
+            "id": 1,
+            "name": "node",
+            "status": false
+        },
+        {
+            "id": 2,
+            "name": "react",
+            "status": false
+        },
+        {
+            "id": 3,
+            "name": "angular",
+            "status": false
+        },
+        {
+            "id": 4,
+            "name": "html",
+            "status": true
+        }
+    ]
+}

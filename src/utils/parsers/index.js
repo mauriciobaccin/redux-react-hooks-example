@@ -8,4 +8,4 @@ const removeFromArray = (array, id) => array.filter(({ id: objId }) => objId !==
 export {
   findAndUpdateArray,
   removeFromArray,
-}
+};

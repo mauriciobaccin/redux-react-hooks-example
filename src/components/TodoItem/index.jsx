@@ -12,29 +12,35 @@ function TodoItem(props) {
   } = props;
 
   function handleOnChange(e) {
-    const isCheckbox = e.target.type === 'checkbox';
+    const {
+      target: {
+        checked,
+        type,
+        value: name,
+      },
+    } = e;
+    const isCheckbox = type === 'checkbox';
 
     onChange({ 
       id,
-      name: e.target.value,
-      status: isCheckbox ? e.target.checked : status,
+      name,
+      status: isCheckbox ? checked : status,
     });
   }
 
   return (
     <div className="cardTodo">
       <input
-        value={name}
         checked={status}
-        type="checkbox"
         onChange={handleOnChange}
+        type="checkbox"
+        value={name}
       />
       <input
         id={id}
-        value={name}
-        type="text"
         onChange={handleOnChange}
-
+        type="text"
+        value={name}
       />
       <div
         className="remove-btn"
