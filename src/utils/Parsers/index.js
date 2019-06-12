@@ -3,9 +3,7 @@ const findAndUpdateArray = (array, obj) => array.map(item => item.id === obj.id
   : item
 );
 
-const removeFromArray = (array, obj) => {
-
-}
+const removeFromArray = (array, id) => array.filter(({ id: objId }) => objId !== id);
 
 export {
   findAndUpdateArray,

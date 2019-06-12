@@ -55,6 +55,7 @@ export default (state = initialState, action) => {
       };
 
     case REMOVE_TODO:
+      console.log(payload)
       return {
         list: removeFromArray(state.list, payload),
       };

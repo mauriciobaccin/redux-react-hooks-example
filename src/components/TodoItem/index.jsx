@@ -8,6 +8,7 @@ function TodoItem(props) {
       status,
     },
     onChange,
+    onRemove,
   } = props;
 
   function handleOnChange(e) {
@@ -34,6 +35,10 @@ function TodoItem(props) {
         type="text"
         onChange={handleOnChange}
 
+      />
+      <div
+        className="remove-btn"
+        onClick={() => onRemove(id)}
       />
     </div>
   );
