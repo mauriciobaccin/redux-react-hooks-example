@@ -11,8 +11,8 @@ const CONTEXT = '@TODO';
 export const ADD_TODO = `${CONTEXT}/ADD_TODO`;
 const addTodoAction = createAction(ADD_TODO);
 
-export const CHANGE_STATUS = `${CONTEXT}/CHANGE_STATUS`;
-const changeStatusAction = createAction(CHANGE_STATUS);
+export const UPDATE_TODO = `${CONTEXT}/UPDATE_TODO`;
+const updateTodoAction = createAction(UPDATE_TODO);
 
 export const REMOVE_TODO = `${CONTEXT}/REMOVE_TODO`;
 const removeTodoTodoAction = createAction(REMOVE_TODO);
@@ -25,8 +25,8 @@ function addTodo(dispatch) {
   }));
 };
 
-function changeTodo(dispatch, todo) {
-  dispatch(changeStatusAction(todo));
+function updateTodo(dispatch, todo) {
+  dispatch(updateTodoAction(todo));
 };
 
 function removeTodo(dispatch, todo) {
@@ -38,7 +38,7 @@ export function useActions() {
 
   return {
     handleAddTodo: () => addTodo(dispatch),
-    handleChangeTodo: todo => changeTodo(dispatch, todo),
+    handleUpdateTodo: todo => updateTodo(dispatch, todo),
     handleRemoveTodo: todo => removeTodo(dispatch, todo),
   }
 };

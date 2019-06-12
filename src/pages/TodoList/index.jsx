@@ -20,7 +20,7 @@ function TodoList(){
 
   const {
     handleAddTodo,
-    handleChangeTodo,
+    handleUpdateTodo,
     handleRemoveTodo,
   } = dispatchers;
 
@@ -29,7 +29,7 @@ function TodoList(){
       <TodoItem
         key={todo.id}
         item={todo}
-        onChange={handleChangeTodo}
+        onChange={handleUpdateTodo}
         onRemove={handleRemoveTodo}
       />
     );

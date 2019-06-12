@@ -1,6 +1,6 @@
 import {
   ADD_TODO,
-  CHANGE_STATUS,
+  UPDATE_TODO,
   REMOVE_TODO,
 } from './actions';
 
@@ -26,7 +26,7 @@ export default (state = initialState, action) => {
         ]
       };
 
-    case CHANGE_STATUS:
+    case UPDATE_TODO:
       return {
         list: findAndUpdateArray(state.list, payload),
       };
