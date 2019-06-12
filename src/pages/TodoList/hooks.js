@@ -2,6 +2,10 @@ import {
   useSelector,
 } from 'react-redux';
 import {
+  useTranslation,
+} from 'react-i18next';
+
+import {
   useActions,
 } from './actions';
 
@@ -12,19 +16,21 @@ function useStore() {
     },
   }) => list);
 
-  const actions = useActions();
+  const dispatchers = useActions();
 
   return [
     todoList,
-    actions,
+    dispatchers,
   ];
 }
 
 function useTranslates() {
-  return ({
-    addTodo: "Novo",
-    pageTitle: 'Minha lista \'TODO\' :D',
-  });
+  const { t } = useTranslation('pages');
+
+  return {
+    addTodo: t('TodoList.addTodo'),
+    pageTitle: t('TodoList.pageTitle'),
+  };
 }
 
 export {

@@ -7,32 +7,9 @@ import {
 import {
   findAndUpdateArray,
   removeFromArray,
-} from '../../utils/Parsers';
+} from '../../utils/parsers';
 
-const initialState = { 
-  list: [
-    {
-      id: 1,
-      name: 'node',
-      status: false,
-    },
-    {
-      id: 2,
-      name: 'react',
-      status: false,
-    },
-    {
-      id: 3,
-      name: 'angular',
-      status: false,
-    },
-    {
-      id: 4,
-      name: 'html',
-      status: true,
-    },
-  ],
-};
+import initialState from './_initialState.json';
 
 export default (state = initialState, action) => {
   const {
@@ -55,7 +32,6 @@ export default (state = initialState, action) => {
       };
 
     case REMOVE_TODO:
-      console.log(payload)
       return {
         list: removeFromArray(state.list, payload),
       };
