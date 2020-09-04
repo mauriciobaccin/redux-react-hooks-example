@@ -7,7 +7,7 @@
     "i18next-browser-languagedetector": "^3.0.1",
     "i18next-icu": "^1.1.2",
     "i18next-xhr-backend": "^3.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-i18next": "^10.11.0",
